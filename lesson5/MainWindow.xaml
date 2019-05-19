@@ -35,7 +35,7 @@
             <ComboBox x:Name="DeptCombo" Margin="40,5,40,5" IsEditable="True"/>                        
             <Button x:Name="EmpbtnAdd" Margin="40,5,40,5" Content="Добавить" Click="EmpbtnAdd_Click" ToolTip="Чтобы добавить надо ввести вручную сотрудника в первое поле и выбрать подразделение во 2м поле."/>
             <Button x:Name="EmpbtnDel" Margin="40,5,40,5" Content="Удалить" Click="EmpbtnDel_Click" ToolTip="Чтобы удалить надо выбрать из выпадающего списка в верхнем поле."/>
-            <Button x:Name="EmpbtnChg" Margin="40,5,40,5" Content="Изменить" Click="EmpbtnChg_Click" ToolTip="Замена подразделения у сотрудника. Выбрать в первом поле сотрудника Во 2м указать новое подразделение."/>
+            <Button x:Name="EmpbtnChg" Margin="40,5,40,5" Content="Изменить подразд." Click="EmpbtnChg_Click" ToolTip="Замена подразделения у сотрудника. Выбрать в первом поле сотрудника Во 2м указать новое подразделение."/>
 
             <Label x:Name="DeptLabel" Content="Подразделение:" HorizontalContentAlignment="Center"  Margin="5" />
             <ComboBox x:Name="DepartCombo" Margin="40,5,40,5" IsEditable="True"/>
