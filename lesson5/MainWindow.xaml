@@ -1,0 +1,49 @@
+﻿<Window x:Class="lesson5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lesson5"
+        mc:Ignorable="d"
+        Title="Cотрудники" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="30*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView x:Name="EmpView" Grid.Column="0" HorizontalAlignment="Right" Width="277">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Сотрудник" Width="265"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ListView x:Name="DeptView" Grid.Column="1" HorizontalAlignment="Left" Width="277">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Подразделение" Width="265"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Grid.Column="2">
+            <Label x:Name="EmpLabel" Content="Сотрудник:" HorizontalContentAlignment="Center"  Margin="5" />
+            <TextBox Name="EmpTextBox" Margin="40,5,40,5"/>
+            <Button x:Name="EmpbtnAdd" Margin="40,5,40,5" Content="Добавить" Click="EmpbtnAdd_Click"/>
+            <Button x:Name="EmpbtnDel" Margin="40,5,40,5" Content="Удалить" Click="EmpbtnDel_Click"/>
+            <ComboBox x:Name="EmpCombo" Margin="40,5,40,5" IsEditable="True"/>
+            <ComboBox x:Name="DeptCombo" Margin="40,5,40,5" IsEditable="True"/>
+            <Button x:Name="EmpbtnChg" Margin="40,5,40,5" Content="Изменить"/>
+
+            <Label x:Name="DeptLabel" Content="Подразделение:" HorizontalContentAlignment="Center"  Margin="5" />
+            <TextBox Name="DeptTextBox" Margin="40,5,40,5"/>
+            <Button x:Name="DeptbtnAdd" Margin="40,5,40,5" Content="Добавить" Click="DeptbtnAdd_Click"/>
+            <Button x:Name="DeptbtnDel" Margin="40,5,40,5" Content="Удалить" Click="DeptbtnDel_Click"/>       
+
+        </StackPanel>
+
+    </Grid>
+</Window>
