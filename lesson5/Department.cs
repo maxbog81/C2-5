@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 namespace lesson5
 {
     class Department //: INotifyPropertyChanged
-    {
-        Random r = new Random();
+    {        
         public ObservableCollection<Department> ListDept = new ObservableCollection<Department>();
         public string Dept { get; set; }
         public Department(string dept)
@@ -24,10 +23,10 @@ namespace lesson5
 
         public void AddElement()
         {
-            for (int i = 0; i < 10; i++)
-            {
-                ListDept.Add(new Department($"Подразд_{r.Next(100, 103)}"));
-            }
+            ListDept.Add(new Department($"Подразд_100"));
+            ListDept.Add(new Department($"Подразд_101"));
+            ListDept.Add(new Department($"Подразд_102"));
+            ListDept.Add(new Department($"Подразд_103"));
         }
 
         public override string ToString()

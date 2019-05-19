@@ -10,13 +10,16 @@ using System.Threading.Tasks;
 namespace lesson5
 {
     class Employee //: INotifyPropertyChanged
-    {        
+    {
+        Random r = new Random();
         public ObservableCollection<Employee> ListEmp = new ObservableCollection<Employee>();
 
         public string Name { get; set; }
-        public Employee(string name)
+        public string Dept { get; set; }
+        public Employee(string name,string dept)
         {
             Name = name;
+            Dept = dept;
         }
 
         public Employee()
@@ -34,13 +37,13 @@ namespace lesson5
         {
             for (int i = 0; i < 10; i++)
             {
-                ListEmp.Add(new Employee($"Имя_{i}"));
+                ListEmp.Add(new Employee($"Имя_{i}", $"Подразд_{r.Next(100, 103)}"));
             }
         }
 
         public override string ToString()
         {
-            return Name;
+            return Name+" - " +Dept;
         }
     }
 }

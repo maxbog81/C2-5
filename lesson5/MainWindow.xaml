@@ -16,7 +16,7 @@
         <ListView x:Name="EmpView" Grid.Column="0" HorizontalAlignment="Right" Width="277">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Сотрудник" Width="265"></GridViewColumn>
+                    <GridViewColumn Header="Сотрудники" Width="265"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -24,22 +24,21 @@
         <ListView x:Name="DeptView" Grid.Column="1" HorizontalAlignment="Left" Width="277">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Подразделение" Width="265"></GridViewColumn>
+                    <GridViewColumn Header="Подразделения" Width="265"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
 
         <StackPanel Grid.Column="2">
             <Label x:Name="EmpLabel" Content="Сотрудник:" HorizontalContentAlignment="Center"  Margin="5" />
-            <TextBox Name="EmpTextBox" Margin="40,5,40,5"/>
-            <Button x:Name="EmpbtnAdd" Margin="40,5,40,5" Content="Добавить" Click="EmpbtnAdd_Click"/>
-            <Button x:Name="EmpbtnDel" Margin="40,5,40,5" Content="Удалить" Click="EmpbtnDel_Click"/>
             <ComboBox x:Name="EmpCombo" Margin="40,5,40,5" IsEditable="True"/>
-            <ComboBox x:Name="DeptCombo" Margin="40,5,40,5" IsEditable="True"/>
-            <Button x:Name="EmpbtnChg" Margin="40,5,40,5" Content="Изменить"/>
+            <ComboBox x:Name="DeptCombo" Margin="40,5,40,5" IsEditable="True"/>                        
+            <Button x:Name="EmpbtnAdd" Margin="40,5,40,5" Content="Добавить" Click="EmpbtnAdd_Click" ToolTip="Чтобы добавить надо ввести вручную сотрудника в первое поле и выбрать подразделение во 2м поле."/>
+            <Button x:Name="EmpbtnDel" Margin="40,5,40,5" Content="Удалить" Click="EmpbtnDel_Click" ToolTip="Чтобы удалить надо выбрать из выпадающего списка в верхнем поле."/>
+            <Button x:Name="EmpbtnChg" Margin="40,5,40,5" Content="Изменить" Click="EmpbtnChg_Click" ToolTip="Замена подразделения у сотрудника. Выбрать в первом поле сотрудника Во 2м указать новое подразделение."/>
 
             <Label x:Name="DeptLabel" Content="Подразделение:" HorizontalContentAlignment="Center"  Margin="5" />
-            <TextBox Name="DeptTextBox" Margin="40,5,40,5"/>
+            <ComboBox x:Name="DepartCombo" Margin="40,5,40,5" IsEditable="True"/>
             <Button x:Name="DeptbtnAdd" Margin="40,5,40,5" Content="Добавить" Click="DeptbtnAdd_Click"/>
             <Button x:Name="DeptbtnDel" Margin="40,5,40,5" Content="Удалить" Click="DeptbtnDel_Click"/>       
 
